@@ -1,26 +1,32 @@
 
-
+<<<<<<< HEAD
 /*
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import styles from "./PokemonSite.module.css";
 import { useNavigate } from "react-router-dom";
 
-
+=======
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./PokemonSite.module.css";
 import logo from "../img/logo/pokemon-logo-thefuckingrightone.svg.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
-//import { pokemonStyleExport } from "./Pokemon"
-import allConstants from "./Pokemon"
-
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 
 //<FontAwesomeIcon icon={solid('user-secret')} />
+>>>>>>> a8723d50b70c81497c593ac245a71f9d90ed508d
+
+
+Fixa med css
+<<<<<<< HEAD
+skapa components istället för att ha allt i samma
+
+=======
+får inte ut abilities eller type
+*/
+>>>>>>> a8723d50b70c81497c593ac245a71f9d90ed508d
 
 const PokemonSite = () => {
 
@@ -30,8 +36,7 @@ const PokemonSite = () => {
     const img = location.state.img;
 
     let URL = `https://pokeapi.co/api/v2/pokemon/${Poke}`
-    
-    /*
+
     useEffect(() => {
          async function fetchPoke() {
         try {
@@ -46,15 +51,6 @@ const PokemonSite = () => {
         }}
         fetchPoke();
     }, []);
-    */
-
-    useEffect(() => {
-        fetch(URL)
-        .then((results) => results.json())
-        .then((data) => setPokeStats(data));
-    }, []);
-    
-
 
       console.log(pokeStats)
     let navigate = useNavigate();
@@ -63,7 +59,6 @@ const PokemonSite = () => {
         navigate(-1)
     }
 
-    //console.log(pokemonStyle)
     
     return (
         <>
