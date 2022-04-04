@@ -1,18 +1,17 @@
 import styles from "./Pokemon.module.css";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Pokemon = ({ id, name, img, url }) => {
   const [types, setTypes] = useState([]);
   const [bgColor, setBgColor] = useState();
 
-
+<<<<<<< HEAD
   const HandleClick = (id, img) => {
     
     console.log(img)
     navigate ("/pokemon", {state:{ id:id, img:img}})
     
-
+=======
   const pokemonStyle = {
     display: "flex",
     backgroundColor: bgColor,
@@ -20,10 +19,9 @@ const Pokemon = ({ id, name, img, url }) => {
     height: "110px",
     marginTop: "20px",
     borderRadius: "28px",
-
+>>>>>>> a8723d50b70c81497c593ac245a71f9d90ed508d
   };
-  
-  
+
   useEffect(() => {
     fetch(url)
       .then((results) => results.json())
@@ -84,29 +82,17 @@ const Pokemon = ({ id, name, img, url }) => {
         return setBgColor("grey");
     }
   }
-  
-  let navigate = useNavigate();
-  const HandleClick = (id, img) => {
-    
-    console.log(pokemonStyle.backgroundColor)
-    navigate ("/pokemon", {state:{ id:id, img:img}})
-    
-  };
 
   return (
-
-    <div style={pokemonStyle} onClick={() => (HandleClick(id, img))}>
-
-
+<<<<<<< HEAD
     <div className="poke-card-container" onClick={() => (HandleClick(id, img))}>
       <div className="poke-img-container">
         <img className="poke-img" src={img} alt={name} />
-
+=======
     <div style={pokemonStyle}>
-
       <div className={styles.img}>
         <img src={img} alt={name} />
-
+>>>>>>> a8723d50b70c81497c593ac245a71f9d90ed508d
       </div>
       <div className={styles.nameContainer}>
         <h2>{name}</h2>
